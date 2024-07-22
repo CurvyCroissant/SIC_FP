@@ -14,7 +14,7 @@ def app():
     model = YOLO(custom_model_path)
     object_names = list(model.names.values())
 
-    min_confidence = st.slider('Confidence Score', 0.0, 1.0)
+    min_confidence = st.slider('Confidence Score', 0.0, 1.0, value=0.5)
 
     # Button to start webcam
     start_button = st.button('Start Webcam')
